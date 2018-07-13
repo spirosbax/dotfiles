@@ -11,7 +11,6 @@ call plug#begin()
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
-
 " General Programming Support
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
@@ -44,8 +43,8 @@ Plug 'tpope/vim-fugitive'
 " Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Colorschemes
 Plug 'rakr/vim-one'
@@ -80,6 +79,7 @@ filetype plugin indent on    " required
 syntax on
 set background:dark
 colorscheme gruvbox
+let g:airline_theme = 'deus'
 
 """""""""""""""""""""""""""""
 " Key mappings

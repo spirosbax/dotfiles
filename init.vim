@@ -20,6 +20,25 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
 Plug 'svermeulen/vim-easyclip'
 Plug 'fatih/vim-go'
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'w0rp/ale'
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tomlion/vim-solidity'
+
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
+
 
 " HTML
 Plug 'alvan/vim-closetag'
@@ -27,6 +46,7 @@ Plug 'alvan/vim-closetag'
 " Motion
 Plug 'wesQ3/vim-windowswap'	  "\ww to select window to swap
 Plug 'easymotion/vim-easymotion' "\\<motion> search, it's awesome!
+Plug 'terryma/vim-multiple-cursors'
 
 
 " Commands
@@ -42,7 +62,7 @@ Plug 'tpope/vim-fugitive'
 " Interface
 " Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -83,7 +103,7 @@ let g:airline_theme = 'deus'
 
 """""""""""""""""""""""""""""
 " Key mappings
-map <C-n> ;NERDTreeToggle<CR>
+map <F4> ;NERDTreeToggle<CR>
 " fuzzy file searching using fzf
 map <F1> ;bprevious<Enter>
 map <F2> ;bnext<Enter>
@@ -160,3 +180,5 @@ let python_highlight_all = 1 "enable all Python syntax highlighting features
 let g:syntastic_mode_map = { "mode" : "passive" }
 " let g:move_key_modifier = "A"
 let g:deoplete#enable_at_startup = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'

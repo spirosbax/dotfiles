@@ -25,6 +25,8 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'w0rp/ale'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tomlion/vim-solidity'
+Plug 'dmdque/solidity.vim'
+
 
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
@@ -97,8 +99,8 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""
 " Colors
 syntax on
-set background:dark
-colorscheme gruvbox
+" set background:dark
+" colorscheme gruvbox
 let g:airline_theme = 'deus'
 
 """""""""""""""""""""""""""""
@@ -160,7 +162,7 @@ set noruler
 set laststatus=2
 set expandtab "expand tabs into spaces
 set ts=4 "set tabs to have 4 spaces
-set cursorline "show a visual line under the cursor's current line
+" set cursorline "show a visual line under the cursor's current line
 set ignorecase
 set smartcase
 set gdefault
@@ -182,3 +184,4 @@ let g:syntastic_mode_map = { "mode" : "passive" }
 let g:deoplete#enable_at_startup = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
+let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"

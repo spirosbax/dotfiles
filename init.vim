@@ -10,6 +10,11 @@ call plug#begin()
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash install.sh',
+"     \ }
 
 " General Programming Support
 Plug 'ntpeters/vim-better-whitespace'
@@ -23,9 +28,22 @@ Plug 'fatih/vim-go'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'w0rp/ale'
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tomlion/vim-solidity'
 Plug 'dmdque/solidity.vim'
+Plug 'nikvdp/ejs-syntax'
+Plug 'posva/vim-vue'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'Shougo/context_filetype.vim'
+Plug 'ap/vim-css-color'
+
+" for LanguageClient-neovim
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls'],
+    \ }
+" not stop completion $ & /
+setlocal iskeyword+=$
+setlocal iskeyword+=-
 
 
 function! BuildComposer(info)
@@ -99,8 +117,8 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""
 " Colors
 syntax on
-" set background:dark
-" colorscheme gruvbox
+set background:dark
+colorscheme gruvbox
 let g:airline_theme = 'deus'
 
 """""""""""""""""""""""""""""
@@ -113,6 +131,7 @@ map <F3> ;Files<Enter>
 " swap shift - ; to ; only in normal mode
 nnoremap ; :
 nnoremap : ;
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -185,3 +204,7 @@ let g:deoplete#enable_at_startup = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
 let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"
+
+autocmd FileType vue setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType ejs setlocal shiftwidth=2 tabstop=2

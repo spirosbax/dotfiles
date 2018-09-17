@@ -205,6 +205,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
 let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"
 
-autocmd FileType vue setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType ejs setlocal shiftwidth=2 tabstop=2
+autocmd FileType vue setlocal shiftwidth=4 tabstop=4
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+autocmd FileType ejs setlocal shiftwidth=4 tabstop=4

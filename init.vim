@@ -35,6 +35,7 @@ Plug 'posva/vim-vue'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ap/vim-css-color'
+Plug 'ludovicchabant/vim-gutentags'
 
 " for LanguageClient-neovim
 set hidden
@@ -73,7 +74,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'qpkorr/vim-bufkill' " :BD :bd
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -124,10 +127,11 @@ let g:airline_theme = 'deus'
 """""""""""""""""""""""""""""
 " Key mappings
 map <F4> ;NERDTreeToggle<CR>
-" fuzzy file searching using fzf
+" fuzzy file searching using ctrlp
 map <F1> ;bprevious<Enter>
 map <F2> ;bnext<Enter>
-map <F3> ;Files<Enter>
+map <F3> ;CtrlPFunky<Enter>
+" map <c-p> ;CtrlP .<Enter>
 " swap shift - ; to ; only in normal mode
 nnoremap ; :
 nnoremap : ;
@@ -208,3 +212,6 @@ let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"
 autocmd FileType vue setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
 autocmd FileType ejs setlocal shiftwidth=4 tabstop=4
+let NERDTreeShowHidden=1
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'c'

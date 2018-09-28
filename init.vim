@@ -35,7 +35,8 @@ Plug 'posva/vim-vue'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ap/vim-css-color'
-Plug 'ludovicchabant/vim-gutentags'
+" use with caution, it will fill your project with large tag files
+" Plug 'ludovicchabant/vim-gutentags'
 
 " for LanguageClient-neovim
 set hidden

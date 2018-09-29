@@ -75,7 +75,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'qpkorr/vim-bufkill' " :BD :bd
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
@@ -128,11 +128,11 @@ let g:airline_theme = 'deus'
 """""""""""""""""""""""""""""
 " Key mappings
 map <F4> ;NERDTreeToggle<CR>
-" fuzzy file searching using ctrlp
 map <F1> ;bprevious<Enter>
 map <F2> ;bnext<Enter>
+" fuzzy file searching using fzf
 map <F3> ;CtrlPFunky<Enter>
-" map <c-p> ;CtrlP .<Enter>
+map <c-p> ;Files<Enter>
 " swap shift - ; to ; only in normal mode
 nnoremap ; :
 nnoremap : ;
@@ -214,5 +214,6 @@ autocmd FileType vue setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
 autocmd FileType ejs setlocal shiftwidth=4 tabstop=4
 let NERDTreeShowHidden=1
+let g:ctrlp_map = ''
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'c'

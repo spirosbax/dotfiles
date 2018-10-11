@@ -35,6 +35,8 @@ Plug 'posva/vim-vue'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ap/vim-css-color'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " use with caution, it will fill your project with large tag files
 " Plug 'ludovicchabant/vim-gutentags'
 
@@ -68,7 +70,8 @@ Plug 'alvan/vim-closetag'
 " Motion
 Plug 'wesQ3/vim-windowswap'	  "\ww to select window to swap
 Plug 'easymotion/vim-easymotion' "\\<motion> search, it's awesome!
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
+Plug 'wincent/scalpel'
 
 
 " Commands
@@ -196,6 +199,7 @@ set hlsearch
 set hidden
 set timeoutlen=1000
 set ttimeoutlen=0
+set nowrap
 " set paste
 
 

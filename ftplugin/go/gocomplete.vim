@@ -1,1 +1,1 @@
-/home/spiros/.config/nvim/plugged/gocode/nvim/ftplugin/go/gocomplete.vim
+/home/spirosbax/.config/nvim/plugged/gocode/nvim/ftplugin/go/gocomplete.vim

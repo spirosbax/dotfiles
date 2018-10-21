@@ -25,8 +25,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
 Plug 'svermeulen/vim-easyclip'
 Plug 'fatih/vim-go'
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+" Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'w0rp/ale'
 Plug 'tomlion/vim-solidity'
 Plug 'dmdque/solidity.vim'
@@ -211,8 +212,8 @@ let g:syntastic_mode_map = { "mode" : "passive" }
 " let g:move_key_modifier = "A"
 let g:deoplete#enable_at_startup = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
 let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"
+let g:multi_cursor_select_all_word_key = '<C-a>'
 
 autocmd FileType vue setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4

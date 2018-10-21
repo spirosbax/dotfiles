@@ -70,8 +70,8 @@ Plug 'alvan/vim-closetag'
 " Motion
 Plug 'wesQ3/vim-windowswap'	  "\ww to select window to swap
 Plug 'easymotion/vim-easymotion' "\\<motion> search, it's awesome!
-" Plug 'terryma/vim-multiple-cursors'
-Plug 'wincent/scalpel'
+Plug 'terryma/vim-multiple-cursors'
+" Plug 'wincent/scalpel'
 
 
 " Commands

@@ -23,7 +23,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
-Plug 'svermeulen/vim-easyclip'
+" Plug 'svermeulen/vim-easyclip' // very bad plugin
 Plug 'fatih/vim-go'
 " Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 " Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
@@ -80,6 +80,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'qpkorr/vim-bufkill' " :BD :bd
 Plug 'junegunn/fzf.vim'
+" Plug '~/.fzf'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 
@@ -166,7 +167,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 set nocompatible       	" be iMproved, required by Vundle
 filetype off           	" required by Vundle
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " make Esc happen without waiting for timeoutlen
 " fixes Powerline delay
@@ -178,7 +179,7 @@ set clipboard=unnamed
 
 set number relativenumber " adds hybrid numbers
 set statusline+=%{FugitiveStatusline()} " adds git info on the statusline
-set scrolloff=3		" scroll when reaching end of page
+set scrolloff=15		" scroll when reaching end of page
 " set autoindent
 set smartindent
 set softtabstop=4
@@ -201,7 +202,11 @@ set hidden
 set timeoutlen=1000
 set ttimeoutlen=0
 set nowrap
-" set paste
+set nocursorcolumn
+set cursorline
+syntax sync minlines=256
+set re=1
+set nogdefault
 
 
 let g:ycm_server_python_interpreter='/usr/bin/python2'

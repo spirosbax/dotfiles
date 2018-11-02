@@ -72,6 +72,13 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+#
+# if terminal emulator running then start tmux
+if [[ $DISPLAY ]]; then
+    # If not running interactively, do not do anything
+    [[ $- != *i* ]] && return
+    [[ -z "$TMUX" ]] && exec tmux
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

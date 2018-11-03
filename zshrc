@@ -105,6 +105,7 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias nv='nvim'
+alias tmuxSplit='/home/spiros/workspace/dotfiles/tmuxSplit.sh'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
 #
 #

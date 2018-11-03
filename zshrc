@@ -68,6 +68,7 @@ plugins=(
   colored-man-pages
   k
   git-auto-status
+  fzf-zsh
 )
 
 source $ZSH/oh-my-zsh.sh

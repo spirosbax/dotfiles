@@ -127,7 +127,7 @@ filetype plugin indent on    " required
 " Colors
 syntax on
 set background:dark
-colorscheme solarized
+colorscheme gruvbox
 let g:airline_theme = 'deus'
 
 """""""""""""""""""""""""""""

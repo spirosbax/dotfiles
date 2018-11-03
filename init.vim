@@ -217,6 +217,7 @@ let g:syntastic_mode_map = { "mode" : "passive" }
 " let g:move_key_modifier = "A"
 let g:deoplete#enable_at_startup = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"
 let g:multi_cursor_select_all_word_key = '<C-a>'
 

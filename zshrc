@@ -106,6 +106,7 @@ fi
 # For a full list of active aliases, run `alias`.
 alias nv='nvim'
 alias tmuxSplit="tmux splitw -h -p 30 -c '#{pane_current_path}'"
+alias lso="stat -c '%A %a %n' *"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
 #

@@ -1,5 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GOPATH=$HOME/workspace/Go
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$(yarn global bin):$PATH"
+export PATH="$PATH:$(gem env gempath)"
+export PATH="$PATH:/home/spiros/.gem/ruby/2.5.0/bin"
 
 # Path to your oh-my-zsh installation.
  export ZSH="/home/spiros/.oh-my-zsh"

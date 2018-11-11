@@ -15,6 +15,9 @@ Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 "     \ 'branch': 'next',
 "     \ 'do': 'bash install.sh',
 "     \ }
+"
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 " General Programming Support
 Plug 'ntpeters/vim-better-whitespace'
@@ -23,7 +26,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
-" Plug 'svermeulen/vim-easyclip' // very bad plugin
 Plug 'fatih/vim-go'
 " Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 " Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
@@ -154,6 +156,10 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 
 """""""""""""""""""""""""""""

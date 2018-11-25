@@ -1,6 +1,5 @@
 """""""""""""""""""""""""""""
-"Vimrc by Spiros Baxevanakis"
-"spirosbax.me		    "
+"Vimrc by Spiros Baxevanakis" spirosbax.me		    "
 """""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""
@@ -127,10 +126,12 @@ filetype plugin indent on    " required
 
 """""""""""""""""""""""""""""
 " Colors
-syntax on
+syntax enable
 set background:dark
-colorscheme gruvbox
+" colorscheme flattened_dark
+colorscheme jellybeans
 let g:airline_theme = 'deus'
+set t_Co=16
 
 """""""""""""""""""""""""""""
 " Key mappings
@@ -160,6 +161,14 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+function! GoDef() abort
+    let wordUnderCursor = expand("<cword>")
+    execute "CtrlPFunky " . wordUnderCursor
+    call feedkeys("\<CR>")
+endfunction
+
+nnoremap <Leader>g :call GoDef()<CR>
 
 
 """""""""""""""""""""""""""""

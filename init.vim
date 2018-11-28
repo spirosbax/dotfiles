@@ -112,17 +112,6 @@ Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 call plug#end()            " required
 
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""
 " Colors
@@ -131,7 +120,7 @@ set background:dark
 " colorscheme flattened_dark
 colorscheme jellybeans
 let g:airline_theme = 'deus'
-set t_Co=16
+" set t_Co=16
 
 """""""""""""""""""""""""""""
 " Key mappings
@@ -224,7 +213,7 @@ set re=1
 set nogdefault
 
 
-let g:ycm_server_python_interpreter='/usr/bin/python2'
+/* let g:ycm_server_python_interpreter='/usr/bin/python2' */
 let python_highlight_all = 1 "enable all Python syntax highlighting features
 " let g:hardtime_default_on = 1 " Hardtime on
 " let g:pymode_python = 'python3'

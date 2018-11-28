@@ -117,12 +117,12 @@ filetype plugin indent on    " required
 
 """""""""""""""""""""""""""""
 " Colors
-" syntax enable
-" set background:dark
+syntax enable
+set background:dark
 " colorscheme flattened_dark
 " colorscheme jellybeans
-" let g:airline_theme = 'deus'
-" set t_Co=16
+let g:airline_theme = 'deus'
+set t_Co=16
 
 """""""""""""""""""""""""""""
 " Key mappings

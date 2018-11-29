@@ -9,6 +9,7 @@ call plug#begin()
 
 " Autocomplete
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'https://github.com/roxma/nvim-yarp'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 " Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
@@ -119,8 +120,7 @@ filetype plugin indent on    " required
 " Colors
 syntax enable
 set background:dark
-" colorscheme flattened_dark
-" colorscheme jellybeans
+colorscheme darkblue
 let g:airline_theme = 'deus'
 set t_Co=16
 
@@ -203,7 +203,7 @@ set nocursorcolumn
 syntax sync minlines=256
 set re=1
 set nogdefault
-
+set pyxversion=3
 
 " let g:ycm_server_python_interpreter='/usr/bin/python2' 
 let python_highlight_all = 1 "enable all Python syntax highlighting features

@@ -202,6 +202,8 @@ set nogdefault
 set pyxversion=3
 
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('min_pattern_length', 1)
+call deoplete#custom#option('auto_complete_delay', 1)
 
 let python_highlight_all = 1 "enable all Python syntax highlighting features
 let g:pymode_python = 'python3'

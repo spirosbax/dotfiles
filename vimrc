@@ -208,7 +208,7 @@ set hlsearch
 set hidden
 set timeoutlen=1000
 set ttimeoutlen=0
-set nowrap
+set wrap
 set nocursorcolumn
 " set cursorline
 syntax sync minlines=256

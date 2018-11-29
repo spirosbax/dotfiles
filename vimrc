@@ -12,12 +12,8 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'https://github.com/roxma/nvim-yarp'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-" Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
-"
+
+" Snippets
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
@@ -32,7 +28,7 @@ Plug 'fatih/vim-go'
 " Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 " Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 " Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'tomlion/vim-solidity'
 Plug 'dmdque/solidity.vim'
 Plug 'nikvdp/ejs-syntax'
@@ -205,13 +201,14 @@ set re=1
 set nogdefault
 set pyxversion=3
 
-" let g:ycm_server_python_interpreter='/usr/bin/python2' 
+let g:deoplete#enable_at_startup = 1
+
 let python_highlight_all = 1 "enable all Python syntax highlighting features
-" let g:hardtime_default_on = 1 " Hardtime on
-" let g:pymode_python = 'python3'
+let g:pymode_python = 'python3'
+let g:pymode_lint_cwindow = 0
+
 let g:syntastic_mode_map = { "mode" : "passive" }
 " let g:move_key_modifier = "A"
-let g:deoplete#enable_at_startup = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"

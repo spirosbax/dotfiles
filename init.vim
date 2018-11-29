@@ -29,7 +29,7 @@ Plug 'fatih/vim-go'
 " Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 " Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 " Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'tomlion/vim-solidity'
 Plug 'dmdque/solidity.vim'
 Plug 'nikvdp/ejs-syntax'
@@ -213,10 +213,10 @@ set re=1
 set nogdefault
 
 
-/* let g:ycm_server_python_interpreter='/usr/bin/python2' */
 let python_highlight_all = 1 "enable all Python syntax highlighting features
-" let g:hardtime_default_on = 1 " Hardtime on
-" let g:pymode_python = 'python3'
+let g:pymode_python = 'python3'
+let g:pymode_lint_cwindow = 0
+
 let g:syntastic_mode_map = { "mode" : "passive" }
 " let g:move_key_modifier = "A"
 let g:deoplete#enable_at_startup = 1

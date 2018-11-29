@@ -157,6 +157,17 @@ endfunction
 
 nnoremap <Leader>g :call GoDef()<CR>
 
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+aug END
+
+" custom function that moves the qf window
+function! MoveQuickFix() abort
+    winc L
+    vertical resize -30
+endfunction
+autocmd FileType qf call MoveQuickFix()
 
 """""""""""""""""""""""""""""
 set clipboard=unnamedplus
@@ -201,13 +212,17 @@ set re=1
 set nogdefault
 set pyxversion=3
 
+" deoplete conf
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('min_pattern_length', 1)
 call deoplete#custom#option('auto_complete_delay', 1)
 
+" python-mode conf
 let python_highlight_all = 1 "enable all Python syntax highlighting features
 let g:pymode_python = 'python3'
 let g:pymode_lint_cwindow = 0
+
+" Vim go conf
 
 let g:syntastic_mode_map = { "mode" : "passive" }
 " let g:move_key_modifier = "A"

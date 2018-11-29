@@ -111,7 +111,7 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias nv='nvim'
-alias tmuxSplit="tmux splitw -h -p -L 75 -c '#{pane_current_path}'"
+alias tmuxSplit="tmux splitw -h -p 75 -c '#{pane_current_path}'"
 alias lso="stat -c '%A %a %n' *"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'

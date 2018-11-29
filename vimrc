@@ -104,6 +104,9 @@ Plug 'AlessandroYorba/Sierra'
 Plug 'altercation/vim-colors-solarized'
 Plug 'dracula/vim'
 
+" Other
+Plug 'drmikehenry/vim-fixkey'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -144,6 +147,7 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)

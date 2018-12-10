@@ -94,6 +94,7 @@ Plug 'scrooloose/nerdtree'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
 
 " Colorschemes
 Plug 'rakr/vim-one'
@@ -102,6 +103,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
 Plug 'AlessandroYorba/Sierra'
 Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/seoul256.vim'
 Plug 'dracula/vim'
 
 " Other
@@ -119,7 +121,8 @@ filetype plugin indent on    " required
 " Colors
 syntax enable
 set background:dark
-colorscheme pablo
+let g:seoul256_background = 234
+colorscheme seoul256
 let g:airline_theme = 'deus'
 set t_Co=16
 
@@ -198,7 +201,7 @@ set noruler
 set laststatus=2
 set expandtab "expand tabs into spaces
 set ts=4 "set tabs to have 4 spaces
-" set cursorline "show a visual line under the cursor's current line
+set cursorline "show a visual line under the cursor's current line
 set ignorecase
 set smartcase
 set gdefault

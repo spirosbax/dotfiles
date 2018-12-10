@@ -19,7 +19,7 @@ Plug 'Shougo/neosnippet-snippets'
 
 " General Programming Support
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
@@ -119,7 +119,7 @@ filetype plugin indent on    " required
 " Colors
 syntax enable
 set background:dark
-colorscheme darkblue
+colorscheme pablo
 let g:airline_theme = 'deus'
 set t_Co=16
 
@@ -168,7 +168,7 @@ aug END
 
 " custom function that moves the qf window
 function! MoveQuickFix() abort
-    winc L
+    winc R
     vertical resize -30
 endfunction
 autocmd FileType qf call MoveQuickFix()

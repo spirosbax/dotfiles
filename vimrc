@@ -72,6 +72,7 @@ Plug 'alvan/vim-closetag'
 Plug 'wesQ3/vim-windowswap'	  "\ww to select window to swap
 Plug 'easymotion/vim-easymotion' "\\<motion> search, it's awesome!
 Plug 'terryma/vim-multiple-cursors'
+Plug 'takac/vim-hardtime'
 " Plug 'wincent/scalpel'
 
 
@@ -218,6 +219,9 @@ syntax sync minlines=256
 set re=1
 set nogdefault
 set pyxversion=3
+
+" hard time conf
+let g:hardtime_ignore_quickfix = 1
 
 " deoplete conf
 let g:deoplete#enable_at_startup = 1

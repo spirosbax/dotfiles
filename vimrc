@@ -109,6 +109,7 @@ Plug 'dracula/vim'
 
 " Other
 Plug 'drmikehenry/vim-fixkey'
+Plug 'kien/rainbow_parentheses.vim'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -220,7 +221,14 @@ set re=1
 set nogdefault
 set pyxversion=3
 
+" rainbow_parentheses 
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 " hard time conf
+let g:hardtime_default_on = 1
 let g:hardtime_ignore_quickfix = 1
 
 " deoplete conf

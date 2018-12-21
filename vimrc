@@ -40,6 +40,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " use with caution, it will fill your project with large tag files
 " Plug 'ludovicchabant/vim-gutentags'
+Plug 'tpope/vim-fireplace'
 
 " for LanguageClient-neovim
 set hidden
@@ -241,8 +242,10 @@ let python_highlight_all = 1 "enable all Python syntax highlighting features
 let g:pymode_python = 'python3'
 let g:pymode_lint_cwindow = 0
 
-" Vim go conf
+" Goyo conf
+" let g:goyo_linenr = 1
 
+" Vim go conf
 let g:syntastic_mode_map = { "mode" : "passive" }
 " let g:move_key_modifier = "A"
 let g:airline#extensions#tabline#enabled = 1

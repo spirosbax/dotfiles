@@ -41,6 +41,8 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " use with caution, it will fill your project with large tag files
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-fireplace'
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 
 " for LanguageClient-neovim
 set hidden
@@ -109,7 +111,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'dracula/vim'
 
 " Other
-Plug 'drmikehenry/vim-fixkey'
+" Plug 'drmikehenry/vim-fixkey'
 Plug 'kien/rainbow_parentheses.vim'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -231,6 +233,7 @@ au Syntax * RainbowParenthesesLoadBraces
 " hard time conf
 let g:hardtime_default_on = 1
 let g:hardtime_ignore_quickfix = 1
+let g:hardtime_ignore_buffer_patterns = ["NERD.*"]
 
 " deoplete conf
 let g:deoplete#enable_at_startup = 1

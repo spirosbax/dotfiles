@@ -20,6 +20,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$(yarn global bin):$PATH"
 export PATH="$PATH:$(gem env gempath)"
 export PATH="$PATH:/home/spiros/.gem/ruby/2.5.0/bin"
+export PATH="$PATH:/home/spiros/omnetpp-5.4.1/bin"
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

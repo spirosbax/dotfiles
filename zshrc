@@ -7,6 +7,7 @@ export PATH="$(yarn global bin):$PATH"
 export PATH="$PATH:$(gem env gempath)"
 export PATH="$PATH:/home/spiros/.gem/ruby/2.5.0/bin"
 export PATH="$PATH:/opt/tropy"
+export PATH="$PATH:/home/spiros/omnetpp-5.4.1/bin"
 
 # Path to your oh-my-zsh installation.
  export ZSH="/home/spiros/.oh-my-zsh"

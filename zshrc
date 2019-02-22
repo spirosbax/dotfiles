@@ -1,14 +1,20 @@
 # If you come from bash you might have to change your $PATH.
 export GOPATH=$HOME/workspace/Go
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+export JRE_HOME="/usr/lib/jvm/java-8-openjdk/jre"
+
+export SPARK_HOME='/home/spiros/spark-2.4.0-bin-hadoop2.7'
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$(yarn global bin):$PATH"
 export PATH="$PATH:$(gem env gempath)"
-export PATH="$PATH:/home/spiros/.gem/ruby/2.5.0/bin"
+export PATH="$PATH:$HOME/spiros/.gem/ruby/2.5.0/bin"
 export PATH="$PATH:/opt/tropy"
-export PATH="$PATH:/home/spiros/omnetpp-5.4.1/bin"
-export PATH="$PATH:/home/spiros/.local/bin"
+export PATH="$PATH:$HOME/omnetpp-5.4.1/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Path to your oh-my-zsh installation.
  export ZSH="/home/spiros/.oh-my-zsh"

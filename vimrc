@@ -19,37 +19,25 @@ Plug 'Shougo/neosnippet-snippets'
 
 " General Programming Support
 Plug 'ntpeters/vim-better-whitespace'
-" Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
 Plug 'fatih/vim-go'
-" Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-" Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
-" Plug 'zchee/deoplete-go', { 'do': 'make'}
-" Plug 'w0rp/ale'
 Plug 'tomlion/vim-solidity'
 Plug 'dmdque/solidity.vim'
 Plug 'nikvdp/ejs-syntax'
 Plug 'posva/vim-vue'
-" Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ap/vim-css-color'
 Plug 'HerringtonDarkholme/yats.vim'
-" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " use with caution, it will fill your project with large tag files
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-fireplace'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
-" Plug 'leafgarland/typescript-vim'
+Plug 'Shougo/deoplete-clangx'
 
-" for LanguageClient-neovim
-set hidden
-let g:LanguageClient_serverCommands = {
-    \ 'vue': ['vls'],
-    \ }
 " not stop completion $ & /
 setlocal iskeyword+=$
 setlocal iskeyword+=-
@@ -66,8 +54,6 @@ function! BuildComposer(info)
 endfunction
 
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
-
-
 
 " HTML
 Plug 'alvan/vim-closetag'
@@ -95,9 +81,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " Interface
-" Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'Shougo/defx.nvim'
 Plug 'scrooloose/nerdtree'
-" Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
@@ -233,7 +218,7 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " hard time conf
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_ignore_buffer_patterns = ["NERD.*"]
 
@@ -268,5 +253,11 @@ let g:ctrlp_map = ''
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'c'
 
-" If installed using git
+" Snippets conf
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/custom-snippets'"
+
+" rpt stuff
 set rtp+=~/.fzf

@@ -33,16 +33,17 @@ Plug 'tomlion/vim-solidity'
 Plug 'dmdque/solidity.vim'
 Plug 'nikvdp/ejs-syntax'
 Plug 'posva/vim-vue'
-Plug 'carlitux/deoplete-ternjs'
+" Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ap/vim-css-color'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " use with caution, it will fill your project with large tag files
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-fireplace'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+" Plug 'leafgarland/typescript-vim'
 
 " for LanguageClient-neovim
 set hidden
@@ -87,6 +88,7 @@ Plug 'junegunn/fzf.vim'
 " Plug '~/.fzf'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+Plug 'rhysd/vim-healthcheck'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -256,10 +258,15 @@ let g:airline_powerline_fonts = 1
 let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"
 let g:multi_cursor_select_all_word_key = '<C-a>'
 
-autocmd FileType vue setlocal shiftwidth=4 tabstop=4
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
-autocmd FileType ejs setlocal shiftwidth=4 tabstop=4
+autocmd FileType vue setlocal shiftwidth=2 tabstop=2
+autocmd FileType js setlocal shiftwidth=2 tabstop=2
+autocmd FileType ejs setlocal shiftwidth=2 tabstop=2
+autocmd FileType tsx setlocal shiftwidth=2 tabstop=2
+
 let NERDTreeShowHidden=1
 let g:ctrlp_map = ''
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'c'
+
+" If installed using git
+set rtp+=~/.fzf

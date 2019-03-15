@@ -3,18 +3,27 @@ export GOPATH=$HOME/workspace/Go
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export JRE_HOME="/usr/lib/jvm/java-8-openjdk/jre"
 
+export LD_LIBRARY_PATH=/usr/lib
 export SPARK_HOME='/home/spiros/spark-2.4.0-bin-hadoop2.7'
 export PYSPARK_DRIVER_PYTHON="jupyter"
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$(yarn global bin):$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$PATH:$(gem env gempath)"
 export PATH="$PATH:$HOME/spiros/.gem/ruby/2.5.0/bin"
 export PATH="$PATH:/opt/tropy"
 export PATH="$PATH:$HOME/omnetpp-5.4.1/bin"
 export PATH="$PATH:$HOME/.local/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# start ssh agent and add keys
+# eval `ssh-agent`
+# ssh-add /home/spiros/.ssh/id_sbdroplet
+
 
 # Path to your oh-my-zsh installation.
  export ZSH="/home/spiros/.oh-my-zsh"
@@ -42,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"

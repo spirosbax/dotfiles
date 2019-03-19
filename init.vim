@@ -1,8 +1,7 @@
 """""""""""""""""""""""""""""
-"Vimrc by Spiros Baxevanakis" spirosbax.com
+" init.vim by Spiros Baxevanakis, spirosbax.com
 """""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""
 " Plugins
 call plug#begin()
 
@@ -50,7 +49,6 @@ Plug 'easymotion/vim-easymotion' "\\<motion> search, it's awesome!
 Plug 'terryma/vim-multiple-cursors'
 Plug 'takac/vim-hardtime'
 
-
 " Commands
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
@@ -58,6 +56,8 @@ Plug 'qpkorr/vim-bufkill' " :BD :bd
 Plug 'junegunn/fzf.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+" Plug 'kassio/neoterm'
+
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -105,6 +105,7 @@ let g:airline_theme = 'deus'
 """""""""""""""""""""""""""""
 " Key mappings
 map <F4> ;NERDTreeToggle<CR>
+nnoremap <Leader>t :call Open_term()<CR>
 map <F1> ;bprevious<Enter>
 map <F2> ;bnext<Enter>
 " fuzzy file searching using fzf
@@ -138,6 +139,14 @@ function! GoDef() abort
 endfunction
 
 nnoremap <Leader>g :call GoDef()<CR>
+
+
+" Custon Functions
+
+function! Open_term() abort
+    exec "vs"
+    exec "term"
+endfunction
 
 
 " aug QFClose
@@ -199,6 +208,8 @@ set cursorline
 " syntax sync minlines=256
 set re=1
 set nogdefault
+set splitbelow
+set splitright
 
 " rainbow_parentheses
 au VimEnter * RainbowParenthesesToggle

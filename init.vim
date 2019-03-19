@@ -105,7 +105,6 @@ let g:airline_theme = 'deus'
 """""""""""""""""""""""""""""
 " Key mappings
 map <F4> ;NERDTreeToggle<CR>
-nnoremap <Leader>t :call Open_term()<CR>
 map <F1> ;bprevious<Enter>
 map <F2> ;bnext<Enter>
 " fuzzy file searching using fzf
@@ -115,6 +114,9 @@ map <c-p> ;Files<Enter>
 nnoremap ; :
 nnoremap : ;
 
+nnoremap <Leader>t :call Open_term()<CR>
+nnoremap <Leader>h :vertical resize -5<CR>
+nnoremap <Leader>l :vertical resize +5<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -210,6 +212,8 @@ set re=1
 set nogdefault
 set splitbelow
 set splitright
+set clipboard+=unnamedplus
+
 
 " rainbow_parentheses
 au VimEnter * RainbowParenthesesToggle

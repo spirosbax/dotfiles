@@ -26,7 +26,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 
 # Path to your oh-my-zsh installation.
- export ZSH="/home/spiros/.oh-my-zsh"
+export ZSH="/home/spiros/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -130,7 +130,7 @@ fi
 # For a full list of active aliases, run `alias`.
 alias v='vim'
 alias nv='nvim'
-alias tmuxSplit="tmux splitw -h -p 75 -c '#{pane_current_path}'"
+alias tmuxSplit="tmux splitw -h -p 70 -c '#{pane_current_path}'"
 alias lso="stat -c '%A %a %n' *"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'

@@ -81,7 +81,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " Interface
-Plug 'Shougo/defx.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -247,6 +246,7 @@ autocmd FileType vue setlocal shiftwidth=2 tabstop=2
 autocmd FileType js setlocal shiftwidth=2 tabstop=2
 autocmd FileType ejs setlocal shiftwidth=2 tabstop=2
 autocmd FileType tsx setlocal shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufRead *.cu set filetype=cpp
 
 let NERDTreeShowHidden=1
 let g:ctrlp_map = ''

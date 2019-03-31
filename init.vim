@@ -23,6 +23,7 @@ Plug 'tomlion/vim-solidity'
 Plug 'dmdque/solidity.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/deoplete-clangx'
+Plug 'spirosbax/vim-mypy'
 " use with caution, it will fill your project with large tag files
 " Plug 'ludovicchabant/vim-gutentags'
 
@@ -151,6 +152,10 @@ function! Open_term() abort
 endfunction
 
 
+function! PrettyPrintJson() abort
+    exec ":%!python -m json.tool"
+endfunction
+
 " aug QFClose
 "   au!
 "   au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
@@ -232,9 +237,9 @@ call deoplete#custom#option('min_pattern_length', 1)
 call deoplete#custom#option('auto_complete_delay', 1)
 
 " python-mode conf
-let python_highlight_all = 1 "enable all Python syntax highlighting features
-let g:pymode_python = 'python3'
-let g:pymode_lint_cwindow = 0
+" let python_highlight_all = 1 "enable all Python syntax highlighting features
+" let g:pymode_python = 'python3'
+" let g:pymode_lint_cwindow = 0
 
 " Goyo conf
 " let g:goyo_linenr = 1
@@ -247,6 +252,15 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:closetag_filenames = "*.html, *.xhtml, *.phtml, *.php, *.jsx, *.js"
 let g:multi_cursor_select_all_word_key = '<C-a>'
+
+" Syntastic config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 autocmd FileType vue setlocal shiftwidth=2 tabstop=2
 autocmd FileType js setlocal shiftwidth=2 tabstop=2

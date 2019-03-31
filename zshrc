@@ -5,8 +5,8 @@ export JRE_HOME="/usr/lib/jvm/java-8-openjdk/jre"
 
 export LD_LIBRARY_PATH=/usr/lib
 export SPARK_HOME='/home/spiros/spark-2.4.0-bin-hadoop2.7'
-export PYSPARK_DRIVER_PYTHON="jupyter"
-export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+# export PYSPARK_DRIVER_PYTHON="jupyter"
+# export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$GOPATH/bin"
@@ -16,6 +16,7 @@ export PATH="$PATH:$HOME/spiros/.gem/ruby/2.5.0/bin"
 export PATH="$PATH:/opt/tropy"
 export PATH="$PATH:$HOME/omnetpp-5.4.1/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

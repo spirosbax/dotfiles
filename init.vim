@@ -43,6 +43,8 @@ Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 " Latex
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'lervag/vimtex'
+let g:vimtex_compiler_progname = 'nvr'
 
 " HTML
 Plug 'alvan/vim-closetag'

@@ -109,8 +109,9 @@ map <F4> ;NERDTreeToggle<CR>
 map <F1> ;bprevious<Enter>
 map <F2> ;bnext<Enter>
 " fuzzy file searching using fzf
-map <F3> ;CtrlPFunky<Enter>
+map <c-g> ;CtrlPFunky<Enter>
 map <c-p> ;Files<Enter>
+map <c-b> ;Buffers<Enter>
 " swap shift - ; to ; only in normal mode
 nnoremap ; :
 nnoremap : ;

@@ -41,6 +41,9 @@ function! BuildComposer(info)
 endfunction
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
+" Latex
+Plug 'xuhdev/vim-latex-live-preview'
+
 " HTML
 Plug 'alvan/vim-closetag'
 

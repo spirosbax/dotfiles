@@ -125,7 +125,6 @@ map <c-b> ;Buffers<Enter>
 nnoremap ; :
 nnoremap : ;
 
-nnoremap <Leader>f :Ranger<CR>
 nnoremap <Leader>t :call Open_term()<CR>
 nnoremap <Leader>h :vertical resize -5<CR>
 nnoremap <Leader>l :vertical resize +5<CR>
@@ -291,5 +290,7 @@ let g:ctrlp_working_path_mode = 'c'
 set rtp+=~/.fzf
 
 " Ranger conf
+let g:ranger_map_keys = 0
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
+nnoremap <Leader>f :Ranger<CR>

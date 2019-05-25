@@ -145,16 +145,15 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
+nnoremap <Leader>g :call GoDef()<CR>
+
+" Custon Functions
+
 function! GoDef() abort
     let wordUnderCursor = expand("<cword>")
     execute "CtrlPFunky " . wordUnderCursor
     call feedkeys("\<CR>")
 endfunction
-
-nnoremap <Leader>g :call GoDef()<CR>
-
-
-" Custon Functions
 
 function! Open_term() abort
     exec "vs"

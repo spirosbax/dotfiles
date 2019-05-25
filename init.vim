@@ -74,6 +74,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
 
 " Colorschemes
 Plug 'rakr/vim-one'
@@ -110,6 +112,8 @@ let g:airline_theme = 'deus'
 
 """""""""""""""""""""""""""""
 " Key mappings
+let mapleader = "\\"
+
 map <F4> ;NERDTreeToggle<CR>
 map <F1> ;bprevious<Enter>
 map <F2> ;bnext<Enter>
@@ -121,6 +125,7 @@ map <c-b> ;Buffers<Enter>
 nnoremap ; :
 nnoremap : ;
 
+nnoremap <Leader>f :Ranger<CR>
 nnoremap <Leader>t :call Open_term()<CR>
 nnoremap <Leader>h :vertical resize -5<CR>
 nnoremap <Leader>l :vertical resize +5<CR>
@@ -274,10 +279,17 @@ autocmd FileType ejs setlocal shiftwidth=2 tabstop=2
 autocmd FileType tsx setlocal shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead *.cu set filetype=cpp
 
+" Nerd Tree
 let NERDTreeShowHidden=1
+
+" CtrlP
 let g:ctrlp_map = ''
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'c'
 
 " rpt stuff
 set rtp+=~/.fzf
+
+" Ranger conf
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_replace_netrw = 1

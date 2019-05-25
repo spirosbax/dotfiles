@@ -131,11 +131,11 @@ fi
 # For a full list of active aliases, run `alias`.
 alias v='vim'
 alias nv='nvim'
+alias ra='ranger'
 alias tmuxSplit="tmux splitw -h -p 70 -c '#{pane_current_path}'"
 alias lso="stat -c '%A %a %n' *"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
-#
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

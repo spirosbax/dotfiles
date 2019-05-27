@@ -146,8 +146,14 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 nnoremap <Leader>g :call GoDef()<CR>
+nnoremap <C-l> :call GreekKeymap()<CR>
 
 " Custon Functions
+
+function! GreekKeymap() abort
+    execute "set keymap=greek_utf-8"
+    call feedkeys("\<CR>")
+endfunction
 
 function! GoDef() abort
     let wordUnderCursor = expand("<cword>")

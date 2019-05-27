@@ -42,8 +42,7 @@ endfunction
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 " Latex
-Plug 'xuhdev/vim-latex-live-preview'
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex' " leader l l  for continious compilation
 let g:vimtex_compiler_progname = 'nvr'
 
 " HTML
@@ -90,6 +89,8 @@ Plug 'dracula/vim'
 " Other
 " Plug 'drmikehenry/vim-fixkey'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'vim-scripts/vim-auto-save'
+
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.

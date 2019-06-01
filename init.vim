@@ -147,7 +147,7 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 nnoremap <Leader>g :call GoDef()<CR>
-nnoremap <C-l> :call GreekKeymap()<CR>
+nnoremap <F3> :call GreekKeymap()<CR>
 
 " Custon Functions
 

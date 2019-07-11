@@ -126,8 +126,8 @@ map <F2> ;bnext<Enter>
 map <F3> ;CtrlPFunky<Enter>
 map <c-p> ;Files<Enter>
 " swap shift - ; to ; only in normal mode
-nnoremap ; :
-nnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>

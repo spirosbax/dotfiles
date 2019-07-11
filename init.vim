@@ -123,8 +123,8 @@ map <c-g> ;CtrlPFunky<Enter>
 map <c-p> ;Files<Enter>
 map <c-b> ;Buffers<Enter>
 " swap shift - ; to ; only in normal mode
-nnoremap ; :
-nnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
 
 nnoremap <Leader>t :call Open_term()<CR>
 nnoremap <Leader>h :vertical resize -5<CR>

@@ -129,8 +129,8 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias v='vim'
-alias nv='nvim'
+alias ov='vim'
+alias vim='nvim'
 alias ra='ranger'
 alias tmuxSplit="tmux splitw -h -p 70 -c '#{pane_current_path}'"
 alias lso="stat -c '%A %a %n' *"

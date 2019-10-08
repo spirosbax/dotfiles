@@ -39,7 +39,10 @@ function! BuildComposer(info)
     endif
   endif
 endfunction
+
+" Notes & Text
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'vimwiki/vimwiki'
 
 " Latex
 Plug 'lervag/vimtex' " leader l l  for continious compilation
@@ -49,7 +52,7 @@ let g:vimtex_compiler_progname = 'nvr'
 Plug 'alvan/vim-closetag'
 
 " Motion
-Plug 'wesQ3/vim-windowswap'	  "\ww to select window to swap
+" Plug 'wesQ3/vim-windowswap'	  "\ww to select window to swap
 Plug 'easymotion/vim-easymotion' "\\<motion> search, it's awesome!
 Plug 'terryma/vim-multiple-cursors'
 Plug 'takac/vim-hardtime'
@@ -115,13 +118,6 @@ let g:airline_theme = 'deus'
 " Key mappings
 let mapleader = "\\"
 
-map <F4> ;NERDTreeToggle<CR>
-map <F1> ;bprevious<Enter>
-map <F2> ;bnext<Enter>
-" fuzzy file searching using fzf
-map <c-g> ;CtrlPFunky<Enter>
-map <c-p> ;Files<Enter>
-map <c-b> ;Buffers<Enter>
 " swap shift - ; to ; only in normal mode
 " nnoremap ; :
 " nnoremap : ;
@@ -147,7 +143,14 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 nnoremap <Leader>g :call GoDef()<CR>
+nnoremap <F1> :bprevious<Enter>
+nnoremap <F2> :bnext<Enter>
 nnoremap <F3> :call GreekKeymap()<CR>
+nnoremap <F4> :NERDTreeToggle<CR>
+" fuzzy file searching using fzf
+nnoremap <C-g> :CtrlPFunky<Enter>
+nnoremap <C-p> :Files<Enter>
+nnoremap <c-b> :Buffers<Enter>
 
 " Custon Functions
 
@@ -234,6 +237,8 @@ set nogdefault
 set splitbelow
 set splitright
 set clipboard+=unnamedplus
+set nocompatible
+
 
 
 " rainbow_parentheses

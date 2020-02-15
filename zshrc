@@ -15,8 +15,7 @@ export PATH="$PATH:$(gem env gempath)"
 export PATH="$PATH:$HOME/spiros/.gem/ruby/2.5.0/bin"
 export PATH="$PATH:/opt/tropy"
 export PATH="$PATH:$HOME/omnetpp-5.4.1/bin"
-export PATH="$PATH:$HOME/.local/bin"
-export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+export PATH="$PATH:$HOME/.local/bin" export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -103,11 +102,11 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 #
 # if terminal emulator running then start tmux
-if [[ $DISPLAY ]]; then
-    # If not running interactively, do not do anything
-    [[ $- != *i* ]] && return
-    [[ -z "$TMUX" ]] && exec tmux
-fi
+# if [[ $DISPLAY ]]; then
+#     # If not running interactively, do not do anything
+#     [[ $- != *i* ]] && return
+#     [[ -z "$TMUX" ]] && exec tmux
+# fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -132,8 +131,9 @@ fi
 alias ov='vim'
 alias vim='nvim'
 alias ra='ranger'
-alias tmuxSplit="tmux splitw -h -p 70 -c '#{pane_current_path}'"
+# alias tmuxSplit="tmux splitw -h -p 70 -c '#{pane_current_path}'"
 alias lso="stat -c '%A %a %n' *"
+alias lab="jupyter lab"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
 #

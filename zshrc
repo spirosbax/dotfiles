@@ -2,6 +2,7 @@
 export GOPATH=$HOME/workspace/Go
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export JRE_HOME="/usr/lib/jvm/java-8-openjdk/jre"
+export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
 
 export LD_LIBRARY_PATH=/usr/lib
 export SPARK_HOME='/home/spiros/spark-2.4.0-bin-hadoop2.7'
@@ -12,10 +13,14 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$PATH:$(gem env gempath)"
-export PATH="$PATH:$HOME/spiros/.gem/ruby/2.5.0/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
 export PATH="$PATH:/opt/tropy"
 export PATH="$PATH:$HOME/omnetpp-5.4.1/bin"
-export PATH="$PATH:$HOME/.local/bin" export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+export PATH="$PATH:$HOME/.julia/bin/"
+
+export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
